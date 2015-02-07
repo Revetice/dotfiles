@@ -8,7 +8,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 if has("unix")
-	set rtp+=~/.vim/bundle/Vundle.vim
+	set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
 elseif has("win32")
 	set rtp+=$VIM/.vim/bundle/Vundle.vim
 endif
@@ -71,8 +71,8 @@ filetype plugin indent on    " required
 " set runtimepath+=$VIM\.vim_runtime
 
 if has("unix")
-	source ~/.vim/vimrcs/basic.vim
-	source ~/.vim/vimrcs/.vimrc_myset
+	source ~/dotfiles/.vim/vimrcs/basic.vim
+	source ~/dotfiles/.vim/vimrcs/.vimrc_myset
 elseif has("win32")
 	source $VIM/.vim/vimrcs/basic.vim
 	source $VIM/.vim/vimrcs/.vimrc_myset
