@@ -119,7 +119,9 @@ inoremap <leader>* /* ==========================================================
 
 set t_Co=256
 set nu
-set relativenumber
+if ( exists('+relativenumber'))
+	set relativenumber
+endif
 set cursorline
 " highlight cursorline guibg=darkred ctermbg=black
 
