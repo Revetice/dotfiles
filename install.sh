@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# zsh
+sudo apt-get install zsh
+
 # vim
 sudo apt-get install gvim
 # for vim You Complete Me
