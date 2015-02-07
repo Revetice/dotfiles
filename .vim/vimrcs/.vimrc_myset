@@ -107,10 +107,10 @@ inoremap <leader>* /* ==========================================================
 
 
 " Colorscheme
-try
-    colorscheme peaksea
-catch
-endtry
+" try
+"     colorscheme peaksea
+" catch
+" endtry
 
 " MISC
 "if("gui_running")
