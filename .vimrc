@@ -118,4 +118,14 @@ endfunction
 " set background=dark
 " colorscheme solarized
 " colorscheme desert
+"
+set t_Co=256
+"set t_Co=255
+" set background=dark
+
 colorscheme molokai
+
+hi CursorLine               ctermbg=237   cterm=none
+hi Visual                   ctermbg=238
+set linespace=1
+set cursorcolumn

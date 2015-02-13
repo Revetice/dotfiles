@@ -117,7 +117,7 @@ inoremap <leader>* /* ==========================================================
     set encoding=utf8 
 "endif
 
-set t_Co=256
+" set t_Co=256
 set nu
 if ( exists('+relativenumber'))
 	set relativenumber

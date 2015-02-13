@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt-get install terminator
+
 # zsh
 sudo apt-get install zsh
 
