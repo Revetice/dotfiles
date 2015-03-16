@@ -125,7 +125,9 @@ set t_Co=256
 
 colorscheme molokai
 
-hi CursorLine               ctermbg=237   cterm=none
-hi Visual                   ctermbg=238
+hi CursorLine               ctermbg=238   cterm=none
+hi CursorColumn             ctermbg=238
+hi Visual                   ctermbg=239
+
 set linespace=1
 set cursorcolumn
