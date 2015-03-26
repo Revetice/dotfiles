@@ -35,6 +35,14 @@ Plugin 'Indent-Guides'
 Plugin 'ctrlp.vim'
 " colortheme
 Plugin 'molokai'
+Plugin 'VisIncr'
+Plugin 'matchit.zip'
+Plugin 'The-NERD-Commenter'
+Plugin 'verilog_systemverilog_fix'
+Plugin 'Tabular'
+Plugin 'fugitive.vim'
+Plugin 'unite.vim'
+Plugin 'airblade/vim-gitgutter'
 " Plugin 'RltvNmbr.vim'
 
 " The following are examples of different formats supported.
@@ -131,3 +139,6 @@ hi Visual                   ctermbg=239
 
 set linespace=1
 set cursorcolumn
+
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+"'ts' is how tab characters are displayed; 'sts' is how many "spaces" to insert when the tab key is pressed ; 'sw' is how many "spaces" to use per indent level; 'et' is whether to use spaces or tabs; 'sta' lets you insert 'sw' "spaces" when pressing tab at the beginning of a line
