@@ -6,7 +6,7 @@ sudo apt-get install terminator
 sudo apt-get install zsh
 
 # vim
-sudo apt-get install gvim
+sudo apt-get install vim-gnome
 # for vim You Complete Me
 sudo apt-get install cmake
 
