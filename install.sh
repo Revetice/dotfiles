@@ -38,3 +38,5 @@ sudo apt-get install fonts-wqy-zenhei
 
 # Open SSH
 # sudo apt-get install openssh-server
+
+sudo apt-get install ack-grep
