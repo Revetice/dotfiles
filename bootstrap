@@ -75,14 +75,14 @@ install_dotfiles () {
 	dst="$HOME/$(basename "$src")"
 
 	link_file "$src" "$dst"
+
+	src="$DOTFILES_ROOT/.zshrc"
+	dst="$HOME/$(basename "$src")"
+	link_file "$src" "$dst"
+
+	src="$DOTFILES_ROOT/.tmux.conf"
+	dst="$HOME/$(basename "$src")"
+	link_file "$src" "$dst"
 }
 
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 install_dotfiles
-
-vim -c "VundleInstall" -c "qa"
-
-# Install YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer

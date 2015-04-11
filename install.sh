@@ -3,6 +3,8 @@
 sudo apt-get install tmux
 sudo apt-get install terminator
 
+sudo apt-get install curl
+
 # zsh
 sudo apt-get install zsh
 
@@ -14,6 +16,8 @@ sudo apt-get install cmake
 # python
 sudo apt-get install python
 sudo apt-get install python-dev
+sudo apt-get install python-pip
+# sudo pip install --upgrade pip
 
 pip install virtualenv
 easy_install -U Sphinx
