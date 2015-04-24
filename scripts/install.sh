@@ -34,3 +34,4 @@ sudo apt-get install ack-grep
 # Open SSH
 # sudo apt-get install openssh-server
 
+sudo apt-get install emacs sbcl

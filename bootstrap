@@ -76,6 +76,11 @@ install_dotfiles () {
 
 	link_file "$src" "$dst"
 
+	src="$DOTFILES_ROOT/.emacs"
+	dst="$HOME/$(basename "$src")"
+
+	link_file "$src" "$dst"
+
 	src="$DOTFILES_ROOT/.zshrc"
 	dst="$HOME/$(basename "$src")"
 	link_file "$src" "$dst"
