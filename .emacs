@@ -19,6 +19,7 @@
 
 (defvar yilin/packages
   '(slime
+	smex
 	;;sublimity
 	org)
   "Default packages")
@@ -39,6 +40,13 @@
 (require 'ido)
 (ido-mode t)
 
+;; smex
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; For common lisp
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
@@ -48,6 +56,27 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+;; recentf
+(require 'recentf)
+
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+;; enable recent files mode.
+(recentf-mode t)
+
+; 50 files ought to be enough.
+(setq recentf-max-saved-items 50)
+
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
+
 ;; Maximize frame at initial
 (setq initial-frame-alist
   (quote((fullscreen . maximized))))
@@ -56,7 +85,7 @@
 (setq column-number-mode t)
 (global-linum-mode t)
 (show-paren-mode t)
-(global-hl-line-mode t)
+;; (global-hl-line-mode t)
 ;; Miscs
 (setq make-backup-files nil)
 
@@ -68,6 +97,17 @@
 
 (setq-default tab-width 4)
 (global-visual-line-mode t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq ido-create-new-buffer 'always)
+
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
 
 ;; Seems conflicts with ido-mode
 ;; (ffap-bindings)
