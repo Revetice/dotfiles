@@ -20,6 +20,8 @@
 (defvar yilin/packages
   '(slime
 	smex
+	ecb
+	ggtags
 	;;sublimity
 	org)
   "Default packages")
@@ -54,7 +56,7 @@
 ;; Disable unused interface
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 
 ;; recentf
 (require 'recentf)
@@ -94,6 +96,7 @@
       visible-bell t)
 
 (load-theme 'wombat t)
+(load "dired-x")
 
 (setq-default tab-width 4)
 (global-visual-line-mode t)
@@ -125,3 +128,26 @@
   (setq backward-delete-char-untabify-method nil))
 
 (add-hook 'verilog-mode-hook 'my-verilog-hook)
+
+;; CEDET
+(require 'cedet)
+(global-ede-mode t)
+(semantic-mode t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))

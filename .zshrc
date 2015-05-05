@@ -5,6 +5,8 @@ plugins=(git tmux z)
 
 # User configuration
 
+DISABLE_AUTO_TITLE=true
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
