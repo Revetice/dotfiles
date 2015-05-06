@@ -1,7 +1,8 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="bira"
-plugins=(git tmux z)
+# plugins=(git tmux z)
+plugins=(tmux z)
 
 # User configuration
 
@@ -14,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 export SHELL='/bin/zsh'
+# export TERM='xterm-256color'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
