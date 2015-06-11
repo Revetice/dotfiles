@@ -19,6 +19,10 @@ export SHELL='/bin/zsh'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+#
+alias tmux="tmux -2"
+alias tmuxinator='TERM=xterm-256color tmuxinator'
+alias mux='TERM=xterm-256color mux'
 
 if [ -d /usr/local/heroku ]
 then
