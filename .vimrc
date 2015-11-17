@@ -15,57 +15,7 @@ elseif has("win32")
 	set rtp+=$VIM/.vim/bundle/Vundle.vim
 endif
 
-if has("unix")
-	call vundle#begin()
-elseif has("win32")
-	call vundle#begin('$VIM/.vim/bundle')
-endif
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'surround.vim'
-Plugin 'The-NERD-tree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'bling/vim-airline'
-" Plugin 'Syntastic'
-" Plugin 'Solarized'
-Plugin 'EasyMotion'
-" Plugin 'Indent-Guides'
-Plugin 'ctrlp.vim'
-" colortheme
-Plugin 'molokai'
-Plugin 'VisIncr'
-Plugin 'matchit.zip'
-Plugin 'The-NERD-Commenter'
-Plugin 'verilog_systemverilog_fix'
-" Plugin 'Tabular'
-Plugin 'fugitive.vim'
-" Plugin 'unite.vim'
-Plugin 'airblade/vim-gitgutter'
-" Plugin 'UltiSnips'
-" Plugin 'RltvNmbr.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-	" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-	" Plugin 'L9'
-" Git plugin not hosted on GitHub
-	" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-	" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-	" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-	" Plugin 'user/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+source ~/.vimrc_plugins
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -134,6 +84,7 @@ set t_Co=256
 " set background=dark
 
 colorscheme molokai
+" colorscheme dracula
 
 hi CursorLine               ctermbg=238   cterm=none
 hi CursorColumn             ctermbg=238
@@ -146,6 +97,8 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2
 "'ts' is how tab characters are displayed; 'sts' is how many "spaces" to insert when the tab key is pressed ; 'sw' is how many "spaces" to use per indent level; 'et' is whether to use spaces or tabs; 'sta' lets you insert 'sw' "spaces" when pressing tab at the beginning of a line
 "
 let g:UltiSnipsExpandTrigger="@@"
+
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 
 command! -nargs=? -range Dec2hex call s:Dec2hex(<line1>, <line2>, '<args>')
 function! s:Dec2hex(line1, line2, arg) range
@@ -182,3 +135,10 @@ function! s:Hex2dec(line1, line2, arg) range
     echo (a:arg =~? '^0x') ? a:arg + 0 : ('0x'.a:arg) + 0
   endif
 endfunction
+
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
+
+let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1

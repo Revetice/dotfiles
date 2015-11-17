@@ -67,8 +67,8 @@ function! s:GrepOperator(type)
 endfunction
 
 " Highlight words
-nmap <leader>* :syn match TempKeyword /\<<C-R>=expand("<cword>")<CR>\>/<CR>
-nmap <leader>c :syn clear TempKeyword<CR>
+"nmap <leader>* :syn match TempKeyword /\<<C-R>=expand("<cword>")<CR>\>/<CR>
+"nmap <leader>c :syn clear TempKeyword<CR>
 highlight TempKeyword ctermfg=red guibg=DarkRed
 " Find color in :h gui-colors or cterm-colors
 
@@ -93,12 +93,12 @@ set tabstop=4
 noremap <leader>a :e ~/Dropbox/Ubuntu/Notes/<cr>
 
 if has("win32")
-	set guifont=Consolas:h15
+	"set guifont=Consolas:h15
 endif
 
 if has("gui_running")
 	try
-		set guifont=Source\ Code\ Pro\ 8
+		"set guifont=Source\ Code\ Pro\ 8
 	endtry
 endif
 
