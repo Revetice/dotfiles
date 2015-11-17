@@ -71,23 +71,10 @@ link_file () {
 }
 
 install_dotfiles () {
-	src="$DOTFILES_ROOT/.vimrc"
-	dst="$HOME/$(basename "$src")"
-
-	link_file "$src" "$dst"
-
-	src="$DOTFILES_ROOT/.emacs"
-	dst="$HOME/$(basename "$src")"
-
-	link_file "$src" "$dst"
-
-	src="$DOTFILES_ROOT/.zshrc"
-	dst="$HOME/$(basename "$src")"
-	link_file "$src" "$dst"
-
-	src="$DOTFILES_ROOT/.tmux.conf"
+	FILE_NAME=$1
+	src="$DOTFILES_ROOT/$FILE_NAME"
 	dst="$HOME/$(basename "$src")"
 	link_file "$src" "$dst"
 }
 
-install_dotfiles
+#install_dotfiles
