@@ -35,5 +35,6 @@ sudo apt-get install ack-grep
 . ./install_python.sh
 . ./vim/install.sh
 . ./zsh/install.sh
+. ./powerline/install.sh
 
 sudo gem install tmuxinator
