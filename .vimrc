@@ -17,13 +17,16 @@ endif
 
 source ~/.vimrc_plugins
 
-if has("unix")
-	source ~/dotfiles/.vim/vimrcs/basic.vim
-	source ~/dotfiles/.vim/vimrcs/.vimrc_myset
-elseif has("win32")
-	source $VIM/.vim/vimrcs/basic.vim
-	source $VIM/.vim/vimrcs/.vimrc_myset
-endif
+" if has("unix")
+" 	source ~/dotfiles/.vim/vimrcs/basic.vim
+" 	source ~/dotfiles/.vim/vimrcs/.vimrc_myset
+" elseif has("win32")
+" 	source $VIM/.vim/vimrcs/basic.vim
+" 	source $VIM/.vim/vimrcs/.vimrc_myset
+" endif
+
+source ~/dotfiles/.vim/vimrcs/basic.vim
+source ~/dotfiles/.vim/vimrcs/.vimrc_myset
 
 nnoremap <F5> :NERDTreeToggle<CR>
 " autocmd FileType verilog syn keyword verilogStatement logic
