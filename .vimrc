@@ -7,13 +7,15 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-if has("unix")
-	" set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
-	" set rtp+=~/dotfiles/.vim
-	set rtp+=~/.vim/bundle/Vundle.vim
-elseif has("win32")
-	set rtp+=$VIM/.vim/bundle/Vundle.vim
-endif
+"if has("unix")
+"	" set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
+"	" set rtp+=~/dotfiles/.vim
+"	set rtp+=~/.vim/bundle/Vundle.vim
+"elseif has("win32")
+"	set rtp+=$VIM/.vim/bundle/Vundle.vim
+"endif
+
+set rtp+=~/.vim/bundle/Vundle.vim
 
 source ~/.vimrc_plugins
 
