@@ -1,9 +1,10 @@
-if has("unix")
-	call vundle#begin()
-elseif has("win32")
-	call vundle#begin('$VIM/.vim/bundle')
-endif
+"if has("unix")
+"	call vundle#begin()
+"elseif has("win32")
+"	call vundle#begin('$VIM/.vim/bundle')
+"endif
 
+call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'surround.vim'
 Plugin 'bling/vim-airline'
