@@ -70,7 +70,14 @@ set t_Co=256
 "set t_Co=255
 " set background=dark
 
-colorscheme molokai
+"colorscheme molokai
+
+try
+    colorscheme molokai
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme desert
+endtry
+
 " colorscheme dracula
 
 hi CursorLine               ctermbg=238   cterm=none

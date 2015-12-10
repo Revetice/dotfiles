@@ -1,8 +1,8 @@
 # git clone git://git.code.sf.net/p/zsh/code zsh
-sudo apt-get install zsh
-chsh -s /bin/zsh
+#sudo apt-get install zsh
+chsh -s $(which zsh)
 
-. OMZ.sh
+#. ./OMZ.sh
 
 
 # Install local

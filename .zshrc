@@ -34,3 +34,5 @@ then
 	export NVM_DIR="/home/yilin/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
+
+export DOTFILE_DIR="/home/yilin/dotfiles"
