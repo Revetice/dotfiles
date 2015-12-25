@@ -35,4 +35,11 @@ then
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
 
+if [ -f $HOME/.my-zshrc.zsh ]
+then
+	source $HOME/.my-zshrc.zsh
+fi
+
 export DOTFILE_DIR="/home/yilin/dotfiles"
+export TMUX_POWERLINE_SEG_WEATHER_LOCATION="90717580"
+

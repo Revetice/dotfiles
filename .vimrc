@@ -130,9 +130,3 @@ function! s:Hex2dec(line1, line2, arg) range
   endif
 endfunction
 
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
-
-let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
