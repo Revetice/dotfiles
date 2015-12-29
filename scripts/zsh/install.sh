@@ -1,5 +1,8 @@
 # git clone git://git.code.sf.net/p/zsh/code zsh
 #sudo apt-get install zsh
+if [ -f /etc/arch-release ]; then
+	sudo pacman -S zsh zsh-completions
+fi
 chsh -s $(which zsh)
 
 #. ./OMZ.sh

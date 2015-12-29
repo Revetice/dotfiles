@@ -99,6 +99,7 @@ endif
 if has("gui_running")
 	try
 		"set guifont=Source\ Code\ Pro\ 8
+		set guifont=Hack\ 12
 	endtry
 endif
 
