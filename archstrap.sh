@@ -35,7 +35,7 @@ mount /dev/sda1 /mnt/boot
 # modify mirrorlist
 # /etc/pacman.d/mirrorlist
 # TODO
-echo 'Server = http://archlinux.cs.nctu.edu.tw/' | cat - /etc/pacman.d/mirrorlist > temp && mv temp /etc/pacman.d/mirrorlist
+echo 'Server = http://archlinux.cs.nctu.edu.tw/$repo/os/$arch' | cat - /etc/pacman.d/mirrorlist > temp && mv temp /etc/pacman.d/mirrorlist
 
 # pacstrap /
 pacstrap -i /mnt base base-devel
