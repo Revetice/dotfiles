@@ -35,19 +35,20 @@ mount /dev/sda1 /mnt/boot
 # modify mirrorlist
 # /etc/pacman.d/mirrorlist
 # TODO
+echo 'Server = http://archlinux.cs.nctu.edu.tw/' | cat - /etc/pacman.d/mirrorlist > temp && mv temp /etc/pacman.d/mirrorlist
 
 # pacstrap /
 pacstrap -i /mnt base base-devel
 
 # gen fstab
-genfstab -U /mnt > /mnt/etc fstab
+genfstab -U /mnt > /mnt/etc/fstab
 
 # change root
 arch-chroot /mnt /bin/bash
 
 # locale
 # modify /etc/locale.gen
-echo 'en_US.UTF-8' >> /letc/locale.gen
+echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 locale-gen
 # modify /etc/locale.conf
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
@@ -91,5 +92,5 @@ echo 'arch' > /etc/hostname
 echo 'Enter Password for Root: '
 passwd
 # unmount
-umount -R /mnt
+# umount -R /mnt
 # reboot
