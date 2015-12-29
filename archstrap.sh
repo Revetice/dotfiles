@@ -37,7 +37,7 @@ mount /dev/sda1 /mnt/boot
 # TODO
 
 # pacstrap /
-pacstrap -i base base-devel
+pacstrap -i /mnt base base-devel
 
 # gen fstab
 genfstab -U /mnt > /mnt/etc fstab
@@ -47,7 +47,7 @@ arch-chroot /mnt /bin/bash
 
 # locale
 # modify /etc/locale.gen
-# TODO
+echo 'en_US.UTF-8' >> /letc/locale.gen
 locale-gen
 # modify /etc/locale.conf
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
@@ -62,11 +62,13 @@ ln -s /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 # assume no need to modify
 
 # install boot loader
+pacstrap -S intel-ucode
 bootctl install
 
 cat << EOF > /boot/loader/entries/arch.conf
 title	Arch Linux
 linux	/vmlinuz-linux
+initrd  /intel-ucode.img
 initrd	/initramfs-linux.img
 options	root=/dev/sda2 rw
 EOF
@@ -83,9 +85,10 @@ echo 'arch' > /etc/hostname
 # ls /sys/class/net
 # ip link
 # TODO
-systemctl enabe dhcpcd@interface.service
+# systemctl enabe dhcpcd@interface.service
 
 # password
+echo 'Enter Password for Root: '
 passwd
 # unmount
 umount -R /mnt
