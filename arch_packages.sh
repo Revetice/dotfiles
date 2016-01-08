@@ -5,11 +5,18 @@ pacman -S --needed gvim
 pacman -S --needed htop
 pacman -S --needed ack
 
-pacman -S --needed plasma-meta
+# pacman -S --needed plasma-meta
 # systemctl enable sddm.service
+
+pacman -S bspwm sxhkd
 
 # font
 # https://github.com/bohoomil/fontconfig-ultimate
+
+# yaourt
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
 
 # [infinality-bundle]
 # Server = http://bohoomil.com/repo/$arch
