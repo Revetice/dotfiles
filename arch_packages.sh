@@ -9,6 +9,7 @@ pacman -S --needed ack
 # systemctl enable sddm.service
 
 pacman -S bspwm sxhkd
+pacman -S xorg-xrdb
 
 # font
 # https://github.com/bohoomil/fontconfig-ultimate
