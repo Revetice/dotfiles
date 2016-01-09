@@ -6,9 +6,9 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
-URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
+! URxvt.transparent:          true
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
@@ -36,9 +36,14 @@ URxvt.cursorColor:          #657b83
 URxvt.cursorUnderline:      false
 
 URxvt.pointerBlank:         true
+!*background:                #222222
+!URxvt.background:			rgba:0000/0000/0200/c800
 
-*background:                #222222
+URxvt*depth:                32
 *foreground:                #e8e9ca
+! urxvt*background:			[80]#222222
+URxvt.background:			rgba:0000/0000/0200/c800
+
 
 *color0:                    #222222
 *color1:                    #8b3e2f
