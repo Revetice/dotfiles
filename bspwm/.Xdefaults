@@ -41,8 +41,8 @@ URxvt.pointerBlank:         true
 
 URxvt*depth:                32
 *foreground:                #e8e9ca
-! urxvt*background:			[80]#222222
-URxvt.background:			rgba:0000/0000/0200/c800
+URxvt*background:			[80]#000000
+! URxvt.background:			rgba:0000/0000/0000/ffff
 
 
 *color0:                    #222222

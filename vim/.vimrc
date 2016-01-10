@@ -94,6 +94,10 @@ let g:UltiSnipsExpandTrigger="@@"
 
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 
+" for transparency
+highlight NonText ctermbg=none
+highlight Normal ctermbg=none
+
 command! -nargs=? -range Dec2hex call s:Dec2hex(<line1>, <line2>, '<args>')
 function! s:Dec2hex(line1, line2, arg) range
   if empty(a:arg)
