@@ -21,7 +21,8 @@ URxvt.allow_bold:           true
 ! URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1
 ! URxvt*font:                 xft:UbuntuMono-R:pixelsize=16
 ! URxvt*boldFont:             xft:UbuntuMono-B:pixelsize=16
-URxvt*font:                 xft:Hack:pixelsize=14
+!URxvt*font:                 xft:Hack:pixelsize=14
+URxvt*font:                 xft:Hack:pixelsize=13
 URxvt*letterSpace:          -1
 
 URxvt.scrollStyle:          rxvt
@@ -40,6 +41,7 @@ URxvt.pointerBlank:         true
 !URxvt.background:			rgba:0000/0000/0200/c800
 
 URxvt*depth:                32
+*background:				#000000
 *foreground:                #e8e9ca
 URxvt*background:			[80]#000000
 ! URxvt.background:			rgba:0000/0000/0000/ffff

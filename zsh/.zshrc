@@ -51,3 +51,10 @@ PANEL_HEIGHT=24
 PANEL_FONT_FAMILY="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"                                
 # PANEL_FONT_FAMILY="*Hack*"
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT_FAMILY   
+
+# /usr/share
+export XDG_DATA_HOME=$HOME/.local/share
+# /etc/xdg
+export XDG_CONFIG_HOME=$HOME/.config
+#export XDG_CACHE_HOME=$HOME/.cache
+#epxort XDG_RUNTIME_DIR
