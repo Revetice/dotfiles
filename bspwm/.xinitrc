@@ -10,4 +10,4 @@ xrdb merge ~/.Xdefaults &
 sxhkd &
 urxvt &
 feh --bg-scale ~/.wallpaper.jpg &
-exec bspwm -c /home/yilin/.config/bspwm/bspwmrc
+exec bspwm -c /home/yilin/.config/bspwm/bspwmrc -f 100
