@@ -22,15 +22,15 @@ URxvt.allow_bold:           true
 ! URxvt*font:                 xft:UbuntuMono-R:pixelsize=16
 ! URxvt*boldFont:             xft:UbuntuMono-B:pixelsize=16
 !URxvt*font:                 xft:Hack:pixelsize=14
-URxvt*font:                 xft:Hack:pixelsize=13
+URxvt*font:                 xft:Hack:pixelsize=14
 URxvt*letterSpace:          -1
 
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
-URxvt.perl-ext-common:      default,matcher
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+! URxvt.perl-ext-common:      default,matcher
+! URxvt.matcher.button:       1
+! URxvt.urlLauncher:          firefox
 
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
@@ -69,3 +69,5 @@ URxvt.matcher.button:		1
 *color13:                   #9f79ee
 *color14:                   #79cdcd
 *color15:                   #e8e9ca
+
+Dmenu*font:                 xft:Hack:pixelsize=14

@@ -48,7 +48,8 @@ export TMUX_POWERLINE_SEG_WEATHER_LOCATION="90717580"
 export PATH=$HOME/.config/bspwm/panel_default:$PATH
 PANEL_FIFO=/tmp/panel-fifo                                                                        
 PANEL_HEIGHT=24                                                                                   
-PANEL_FONT_FAMILY="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"                                
+# PANEL_FONT_FAMILY="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"                                
+PANEL_FONT_FAMILY="xft:Hack:pixelsize=14"                                
 # PANEL_FONT_FAMILY="*Hack*"
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT_FAMILY   
 
