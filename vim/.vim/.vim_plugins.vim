@@ -31,3 +31,5 @@ Plugin 'molokai'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+nnoremap <F5> :NERDTreeToggle<CR>
