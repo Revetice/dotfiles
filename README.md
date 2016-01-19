@@ -1,5 +1,5 @@
 Prerequisite
-============
+------------
 
 * Install `stow`
 
