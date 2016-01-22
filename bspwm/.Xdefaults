@@ -6,6 +6,8 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
+*font:                 xft:Hack:pixelsize=14
+
 ! Tango colour palette
 *foreground: white
 *background: black
