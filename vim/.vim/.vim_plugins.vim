@@ -1,8 +1,3 @@
-"if has("unix")
-"	call vundle#begin()
-"elseif has("win32")
-"	call vundle#begin('$VIM/.vim/bundle')
-"endif
 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -33,3 +28,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 nnoremap <F5> :NERDTreeToggle<CR>
+
+let g:UltiSnipsExpandTrigger="@@"
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
