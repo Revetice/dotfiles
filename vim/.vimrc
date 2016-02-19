@@ -35,3 +35,4 @@ highlight NonText ctermbg=none
 highlight Normal ctermbg=none
 highlight Special ctermbg=none
 
+au BufNewFile,BufRead *.v,*.vh,*.sv,*.svi	set filetype=verilog_systemverilog
