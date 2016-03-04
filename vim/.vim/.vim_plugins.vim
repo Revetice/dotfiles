@@ -12,7 +12,7 @@ Plugin 'molokai'
 
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'The-NERD-tree'
-" Plugin 'Syntastic'
+Plugin 'Syntastic'
 " Plugin 'Solarized'
 " Plugin 'EasyMotion'
 " Plugin 'Indent-Guides'
@@ -31,3 +31,15 @@ nnoremap <F5> :NERDTreeToggle<CR>
 
 let g:UltiSnipsExpandTrigger="@@"
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+
+
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/bin/python2'
