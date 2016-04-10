@@ -1,8 +1,17 @@
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="bira"
+source /usr/share/zsh-antigen/antigen.zsh
+
+antigen use oh-my-zsh
+antigen theme bira
+
+antigen bundle git
+antigen bundle tmux
+antigen bundle z
+
+# ZSH_THEME="bira"
 # plugins=(git tmux z)
-plugins=(tmux z)
+# plugins=(tmux z)
 
 # User configuration
 
@@ -14,7 +23,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 export VISUAL='vim'
