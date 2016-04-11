@@ -9,6 +9,7 @@ Plugin 'The-NERD-Commenter'
 Plugin 'verilog_systemverilog_fix'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'molokai'
+Plugin 'davidhalter/jedi-vim'
 
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'The-NERD-tree'
@@ -45,3 +46,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = '/usr/bin/python2'
 
 let g:airline_powerline_fonts = 1
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
