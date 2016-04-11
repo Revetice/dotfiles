@@ -1,4 +1,7 @@
-# export ZSH=$HOME/.oh-my-zsh
+# export zsh=$home/.oh-my-zsh
+
+source $HOME/.config/zsh/environment.zsh
+source $HOME/.config/zsh/settings.zsh
 
 source /usr/share/zsh-antigen/antigen.zsh
 
@@ -9,42 +12,8 @@ antigen bundle git
 antigen bundle tmux
 antigen bundle z
 
-# ZSH_THEME="bira"
-# plugins=(git tmux z)
-# plugins=(tmux z)
-
-# User configuration
-
 DISABLE_AUTO_TITLE=true
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# source $ZSH/oh-my-zsh.sh
-export LANG=en_US.UTF-8
-export EDITOR='vim'
-export VISUAL='vim'
-export SHELL='/bin/zsh'
-# export TERM='xterm-256color'
 #
-export XDG_DATA_HOME=$HOME/.local/share # mapping: /usr/share
-export XDG_CONFIG_HOME=$HOME/.config # mapping: /etc/xdg
-#export XDG_CACHE_HOME=$HOME/.cache
-#epxort XDG_RUNTIME_DIR
-
-# Tmux weather plugin
-export TMUX_POWERLINE_SEG_WEATHER_LOCATION="90717580"
-
-export PANEL_FIFO PANEL_HEIGHT PANEL_FONT_FAMILY   
-# PANEL_FONT_FAMILY="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
-PANEL_FONT_FAMILY="xft:Hack:pixelsize=14"
-PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-
-export PATH=$HOME/.config/bspwm/panel_default:$PATH
 
 # ====================
 alias tmux="tmux -2"
@@ -68,11 +37,16 @@ then
 	source $HOME/.my-zshrc.zsh
 fi
 
-# ====================
-
 # auto rehash
 zstyle ':completion:*' rehash true
 
+if [ -d $HOME/.rvm ]
+then
+	export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+for f in $HOME/local-zsh/*
+do
+	source $f
+done
