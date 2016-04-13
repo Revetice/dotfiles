@@ -3,6 +3,7 @@
 source $HOME/.config/zsh/environment.zsh
 source $HOME/.config/zsh/settings.zsh
 source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/functions.zsh
 
 source /usr/share/zsh-antigen/antigen.zsh
 
