@@ -24,6 +24,7 @@ set cursorcolumn
 
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType java setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType verilog_systemverilog setlocal shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 "'ts' is how tab characters are displayed;
