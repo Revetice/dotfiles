@@ -21,3 +21,6 @@ DISABLE_AUTO_TITLE=true
 # auto rehash
 zstyle ':completion:*' rehash true
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

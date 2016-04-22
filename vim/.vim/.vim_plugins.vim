@@ -11,6 +11,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'molokai'
 Plugin 'davidhalter/jedi-vim'
 
+Plugin 'mattn/emmet-vim'
+
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'The-NERD-tree'
 Plugin 'Syntastic'

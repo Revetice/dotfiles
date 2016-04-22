@@ -40,6 +40,13 @@ then
 	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
+if [ -d $HOME/.rbenv/ ]
+then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+	export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+fi
+
 for f in $HOME/local-zsh/*
 do
 	source $f
