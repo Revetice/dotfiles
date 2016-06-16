@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -16,7 +17,9 @@ export XDG_DATA_HOME=$HOME/.local/share # mapping: /usr/share
 export XDG_CONFIG_HOME=$HOME/.config # mapping: /etc/xdg
 #export XDG_CACHE_HOME=$HOME/.cache
 #epxort XDG_RUNTIME_DIR
-#
+
+export PYTHONDONTWRITEBYTECODE=1
+
 if [ -d /usr/local/heroku ]
 then
 	export PATH="/usr/local/heroku/bin:$PATH"
