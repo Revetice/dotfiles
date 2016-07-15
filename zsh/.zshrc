@@ -15,6 +15,7 @@ antigen theme bira
 antigen bundle git
 antigen bundle tmux
 antigen bundle z
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 DISABLE_AUTO_TITLE=true
 
