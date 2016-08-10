@@ -15,9 +15,12 @@ Plugin 'davidhalter/jedi-vim'
 
 Plugin 'mattn/emmet-vim'
 
+" Plugin 'ifdef-highlighting'
+Plugin 'c.vim'
+
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'The-NERD-tree'
-Plugin 'Syntastic'
+" Plugin 'Syntastic'
 " Plugin 'Solarized'
 " Plugin 'EasyMotion'
 " Plugin 'Indent-Guides'

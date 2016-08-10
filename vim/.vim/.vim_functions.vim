@@ -1,4 +1,27 @@
 
+function! TabMessage(cmd)
+  redir => message
+  silent execute a:cmd
+  redir END
+  if empty(message)
+    echoerr "no output"
+  else
+    " use "new" instead of "tabnew" below if you prefer split windows instead of tabs
+    tabnew
+    setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
+    silent put=message
+  endif
+endfunction
+command! -nargs=+ -complete=command TabMessage call TabMessage(<q-args>)
+
+" work-around to copy selected text to system clipboard
+" and prevent it from clearing clipboard when using ctrl+z (depends on xsel)
+function! CopyText()
+  normal gv"+y
+  :call system('xsel -ibp', getreg('+'))
+endfunction
+vmap <leader>y :call CopyText()<CR>
+
 command! -nargs=? -range Dec2hex call s:Dec2hex(<line1>, <line2>, '<args>')
 function! s:Dec2hex(line1, line2, arg) range
   if empty(a:arg)
