@@ -50,6 +50,11 @@ then
 	export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 fi
 
+if [ -d $HOME/algs4 ]
+then
+	export PATH="$HOME/algs4/bin:$PATH"
+fi
+
 for f in $HOME/local-zsh/*
 do
 	source $f
