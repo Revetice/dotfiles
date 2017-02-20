@@ -1,5 +1,5 @@
 
-ZDIR='.zsh.d'
+ZDIR="$HOME/.zsh.d"
 
 # grml zshrc
 # https://grml.org/zsh/

@@ -7,4 +7,3 @@ brew install htop
 brew install tree
 
 brew install Caskroom/cask/meld
-brew install zsh-syntax-highlighting
