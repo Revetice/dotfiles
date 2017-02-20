@@ -2,6 +2,7 @@ Prerequisite
 ------------
 
 * Install `stow`
+  - osx: brew install stow
 
 Install
 -------

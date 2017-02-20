@@ -1,6 +1,3 @@
-[user]
-	email = revetice@gmail.com
-	name = Yilin
 [alias]
 	unstage = reset HEAD --
 	last = log -1 HEAD
