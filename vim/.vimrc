@@ -17,6 +17,7 @@ autocmd FileType java setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+" autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType verilog_systemverilog setlocal shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 "'ts' is how tab characters are displayed;
 "'sts' is how many "spaces" to insert when the tab key is pressed ;
@@ -31,3 +32,11 @@ highlight Special ctermbg=none
 
 au BufNewFile,BufRead *.v,*.vh,*.sv,*.svi	set filetype=verilog_systemverilog
 
+try
+	set guifont=Sauce\ Code\ Powerline\ ExtraLight:h18
+endtry
+
+set clipboard=unnamed
+
+" Remove multiple blank lines
+" :g/^$/,/./-j

@@ -11,7 +11,7 @@ Plugin 'The-NERD-Commenter'
 Plugin 'verilog_systemverilog_fix'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'molokai'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 Plugin 'mattn/emmet-vim'
 
