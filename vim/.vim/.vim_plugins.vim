@@ -1,22 +1,23 @@
 
 filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'surround.vim'
-Plugin 'bling/vim-airline'
-Plugin 'VisIncr'
-Plugin 'matchit.zip'
-Plugin 'The-NERD-Commenter'
-Plugin 'verilog_systemverilog_fix'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'molokai'
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+call plug#begin('~/.vim/plugged')
+" Plug 'gmarik/Vundle.vim'
+" Plug 'surround.vim'
+" Plug 'bling/vim-airline'
+" Plug 'VisIncr'
+" Plug 'matchit.zip'
+" Plug 'The-NERD-Commenter'
+" Plug 'verilog_systemverilog_fix'
+" Plug 'airblade/vim-gitgutter'
+Plug 'tomasr/molokai'
 " Plugin 'davidhalter/jedi-vim'
 
-Plugin 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 
 " Plugin 'ifdef-highlighting'
-Plugin 'c.vim'
+" Plug 'c.vim'
 
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'The-NERD-tree'
@@ -32,7 +33,8 @@ Plugin 'c.vim'
 " Plugin 'fugitive.vim'
 " Plugin 'unite.vim'
 
-call vundle#end()            " required
+" call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 
 nnoremap <F5> :NERDTreeToggle<CR>
@@ -42,15 +44,15 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 
 
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_exec = '/usr/bin/python2'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_python_exec = '/usr/bin/python2'
 
 let g:airline_powerline_fonts = 1
 "python from powerline.vim import setup as powerline_setup
