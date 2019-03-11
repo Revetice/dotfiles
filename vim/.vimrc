@@ -6,7 +6,7 @@ source ~/.vim/.vim_myset.vim
 source ~/.vim/.vim_plugins.vim
 source ~/.vim/.vim_functions.vim
 
-colorscheme molokai
+" colorscheme molokai
 
 hi CursorLine               ctermbg=238   cterm=none
 hi CursorColumn             ctermbg=238
