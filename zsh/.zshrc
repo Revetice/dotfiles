@@ -101,6 +101,7 @@ case $(uname) in
   Darwin)
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    alias emacs="/usr/local/bin/emacs"
     ;;
   Linux)
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
