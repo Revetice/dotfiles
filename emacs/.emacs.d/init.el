@@ -18,22 +18,36 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
+;; fix string-trim error
+(require 'subr-x)
+
+;;
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;;
 (require 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (helm-mode 1)
 
+;;
+(require 'projectile)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+
+;;
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;;
 (load-theme 'dracula)
 
+;;
 (toggle-frame-fullscreen)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
@@ -44,4 +58,11 @@ There are two things you can do about this warning:
 (setq vc-follow-symlinks nil)
 (setq scroll-error-top-bottom 'true)
 
+;;
 (global-set-key (kbd "<f12>") (lambda () (interactive) (find-file-other-window user-init-file)))
+
+;;
+(defun find-user-init-file ()
+  (interactive)
+  (find-file-other-window user-init-file))
+(global-set-key (kbd "C-c I") 'find-user-init-file)
