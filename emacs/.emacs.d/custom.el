@@ -6,7 +6,9 @@
  '(custom-safe-themes
    (quote
     ("274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" default)))
- '(package-selected-packages (quote (swiper magit evil projectile helm dracula-theme))))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme swiper magit evil projectile helm dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

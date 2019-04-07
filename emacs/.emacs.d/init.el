@@ -64,7 +64,8 @@ There are two things you can do about this warning:
 (load custom-file)
 
 ;;
-(load-theme 'dracula)
+(load-theme 'zenburn t)
+;; (load-theme 'dracula)
 
 ;;
 (toggle-frame-fullscreen)
@@ -79,10 +80,8 @@ There are two things you can do about this warning:
 (setq lazy-highlight-cleanup nil)
 
 ;;
-(global-set-key (kbd "<f12>") (lambda () (interactive) (find-file-other-window user-init-file)))
-
-;;
 (defun find-user-init-file ()
   (interactive)
   (find-file-other-window user-init-file))
 (global-set-key (kbd "C-c I") 'find-user-init-file)
+(global-set-key (kbd "<f12>") 'find-user-init-file)
