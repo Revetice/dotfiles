@@ -47,9 +47,10 @@ There are two things you can do about this warning:
       evil-visual-state-tag   (propertize " <V> " 'face '((:background "gray"           :foreground "black")))
       evil-operator-state-tag (propertize " <O> " 'face '((:background "sandy brown"    :foreground "black"))))
 (define-key evil-emacs-state-map (kbd "C-z") 'evil-force-normal-state)
+(define-key evil-normal-state-map (kbd "M-.") 'xref-find-definitions)
 (setq evil-normal-state-cursor '("orange")
       evil-emacs-state-cursor '("cyan"))
-(setq evil-search-module 'evil-search)
+;; (setq evil-search-module 'evil-search)
 (evil-mode 1)
 
 ;;
@@ -71,11 +72,6 @@ There are two things you can do about this warning:
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;;
-(load-theme 'solarized-dark)
-;; (load-theme 'zenburn t)
-;; (load-theme 'dracula)
-
-;;
 (toggle-frame-fullscreen)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
@@ -86,6 +82,7 @@ There are two things you can do about this warning:
 (setq vc-follow-symlinks nil)
 (setq scroll-error-top-bottom 'true)
 (setq lazy-highlight-cleanup nil)
+(setq lazy-highlight-initial-delay 0)
 
 ;;
 (defun find-user-init-file ()
@@ -93,3 +90,8 @@ There are two things you can do about this warning:
   (find-file-other-window user-init-file))
 (global-set-key (kbd "C-c I") 'find-user-init-file)
 (global-set-key (kbd "<f12>") 'find-user-init-file)
+
+;;
+;; (load-theme 'zenburn t)
+;; (load-theme 'solarized-dark)
+(load-theme 'dracula)
