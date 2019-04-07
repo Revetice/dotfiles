@@ -35,10 +35,25 @@ There are two things you can do about this warning:
 (helm-mode 1)
 
 ;;
+(require 'evil)
+(evil-mode 1)
+(setq evil-normal-state-tag   (propertize " <N> " 'face '((:background "DarkGoldenrod2" :foreground "black")))
+      evil-emacs-state-tag    (propertize " <E> " 'face '((:background "SkyBlue2"       :foreground "black")))
+      evil-insert-state-tag   (propertize " <I> " 'face '((:background "chartreuse3"    :foreground "black")))
+      evil-replace-state-tag  (propertize " <R> " 'face '((:background "chocolate"      :foreground "black")))
+      evil-motion-state-tag   (propertize " <M> " 'face '((:background "plum3"          :foreground "black")))
+      evil-visual-state-tag   (propertize " <V> " 'face '((:background "gray"           :foreground "black")))
+      evil-operator-state-tag (propertize " <O> " 'face '((:background "sandy brown"    :foreground "black"))))
+(define-key evil-emacs-state-map (kbd "C-z") 'evil-force-normal-state)
+(setq evil-normal-state-cursor '("orange")
+      evil-emacs-state-cursor '("cyan"))
+
+;;
 (require 'projectile)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
+(setq projectile-completion-system 'helm)
 
 ;;
 (setq custom-file "~/.emacs.d/custom.el")
