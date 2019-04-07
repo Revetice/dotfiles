@@ -35,8 +35,10 @@ There are two things you can do about this warning:
 (helm-mode 1)
 
 ;;
+(global-set-key "\C-s" 'swiper)
+
+;;
 (require 'evil)
-(evil-mode 1)
 (setq evil-normal-state-tag   (propertize " <N> " 'face '((:background "DarkGoldenrod2" :foreground "black")))
       evil-emacs-state-tag    (propertize " <E> " 'face '((:background "SkyBlue2"       :foreground "black")))
       evil-insert-state-tag   (propertize " <I> " 'face '((:background "chartreuse3"    :foreground "black")))
@@ -47,6 +49,8 @@ There are two things you can do about this warning:
 (define-key evil-emacs-state-map (kbd "C-z") 'evil-force-normal-state)
 (setq evil-normal-state-cursor '("orange")
       evil-emacs-state-cursor '("cyan"))
+(setq evil-search-module 'evil-search)
+(evil-mode 1)
 
 ;;
 (require 'projectile)
@@ -72,6 +76,7 @@ There are two things you can do about this warning:
 (setq inhibit-splash-screen t)
 (setq vc-follow-symlinks nil)
 (setq scroll-error-top-bottom 'true)
+(setq lazy-highlight-cleanup nil)
 
 ;;
 (global-set-key (kbd "<f12>") (lambda () (interactive) (find-file-other-window user-init-file)))
