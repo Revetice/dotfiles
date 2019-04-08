@@ -72,6 +72,17 @@ There are two things you can do about this warning:
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;;
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C--") 'er/contract-region)
+
+;;
+(global-flycheck-mode)
+
+;;
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;;
 (toggle-frame-fullscreen)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
