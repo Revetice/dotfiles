@@ -83,6 +83,12 @@ There are two things you can do about this warning:
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;;
+(require 'company)
+(setq company-idle-delay 0)
+(add-hook 'after-init-hook 'global-company-mode)
+(add-to-list 'company-backends '(company-capf company-dabbrev))
+
+;;
 (toggle-frame-fullscreen)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
