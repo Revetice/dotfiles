@@ -51,6 +51,7 @@ There are two things you can do about this warning:
 (setq evil-normal-state-cursor '("orange")
       evil-emacs-state-cursor '("cyan"))
 ;; (setq evil-search-module 'evil-search)
+(setq-default evil-symbol-word-search t)
 (evil-mode 1)
 
 ;;
@@ -80,7 +81,7 @@ There are two things you can do about this warning:
 (global-flycheck-mode)
 
 ;;
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+;; (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;;
 (require 'company)
@@ -92,6 +93,20 @@ There are two things you can do about this warning:
 (toggle-frame-fullscreen)
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
+
+(column-number-mode)
+
+(global-hl-line-mode)
+
+(setq display-time-24hr-format t)
+(display-time-mode t)
+
+(setq-default tab-width 4)
+
+(setq show-paren-delay 0)
+(show-paren-mode 1)
+
+(which-function-mode 1)
 
 (set-face-attribute 'default nil :height 180)
 
@@ -109,6 +124,20 @@ There are two things you can do about this warning:
 (global-set-key (kbd "<f12>") 'find-user-init-file)
 
 ;;
+(require 'all-the-icons)
+;; M-x all-the-icons-install-fonts
+
+;;
+(require 'doom-modeline)
+(setq doom-modeline-buffer-file-name-style 'file-name)
+(doom-modeline-mode 1)
+
+;;
+(require 'doom-themes)
+;; (load-theme 'doom-one t)
+(load-theme 'doom-dracula t)
+
+;;
 ;; (load-theme 'zenburn t)
 ;; (load-theme 'solarized-dark)
-(load-theme 'dracula)
+;; (load-theme 'dracula)
