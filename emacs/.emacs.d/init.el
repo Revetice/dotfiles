@@ -18,9 +18,9 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
-(dolist (package '(use-package))
-   (unless (package-installed-p package)
-       (package-install package)))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 ;; This is only needed once, near the top of the file
 (eval-when-compile
@@ -37,12 +37,14 @@ There are two things you can do about this warning:
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda))
 
+(require 'helm-config)
+
 (use-package helm
   :ensure t
-  :bind (("M-x" . helm-M-x)
-		 ("C-x C-f" . helm-find-files)
-		 ("C-x r b" . helm-filtered-bookmarks))
   :config
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+  (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
   (helm-mode 1))
 
 (use-package projectile
@@ -122,6 +124,16 @@ There are two things you can do about this warning:
   :config
   (global-set-key "\C-s" 'swiper))
 
+(use-package avy
+  :ensure t
+  :config
+  (global-set-key (kbd "C-:") 'avy-goto-char)
+  (global-set-key (kbd "C-'") 'avy-goto-char-2)
+  (global-set-key (kbd "M-g f") 'avy-goto-line)
+  (global-set-key (kbd "M-g w") 'avy-goto-word-1)
+  (global-set-key (kbd "M-g e") 'avy-goto-word-0)
+  (global-set-key (kbd "C-c C-j") 'avy-resume))
+
 ;; (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (setq custom-file "~/.emacs.d/custom.el")
@@ -138,6 +150,12 @@ There are two things you can do about this warning:
 (column-number-mode)
 
 (global-hl-line-mode)
+
+(global-auto-revert-mode)
+
+(global-superword-mode)
+
+(display-battery-mode)
 
 (setq display-time-24hr-format t)
 (display-time-mode t)
@@ -157,6 +175,7 @@ There are two things you can do about this warning:
 (setq scroll-error-top-bottom 'true)
 (setq lazy-highlight-cleanup nil)
 (setq lazy-highlight-initial-delay 0)
+(setq confirm-kill-emacs 'y-or-n-p)
 
 ;; custom function
 (defun find-user-init-file ()
