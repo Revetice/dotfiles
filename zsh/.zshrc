@@ -106,6 +106,10 @@ case $(uname) in
     ;;
   Linux)
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    export PATH="$HOME/.pyenv/bin:$PATH"
   ;;
 esac
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
