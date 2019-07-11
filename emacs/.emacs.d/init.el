@@ -37,7 +37,6 @@ There are two things you can do about this warning:
   (define-key global-map "\C-cl" 'org-store-link)
   (define-key global-map "\C-ca" 'org-agenda))
 
-(require 'helm-config)
 
 (use-package helm
   :ensure t
@@ -45,6 +44,7 @@ There are two things you can do about this warning:
   (global-set-key (kbd "M-x") 'helm-M-x)
   (global-set-key (kbd "C-x C-f") 'helm-find-files)
   (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
+  (require 'helm-config)
   (helm-mode 1))
 
 (use-package projectile

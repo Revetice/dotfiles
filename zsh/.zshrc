@@ -106,6 +106,7 @@ case $(uname) in
     ;;
   Linux)
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    export PATH="$HOME/.pyenv/bin:$PATH"
   ;;
 esac
 
