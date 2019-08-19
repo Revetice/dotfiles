@@ -101,7 +101,7 @@ case $(uname) in
   Darwin)
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    alias emacs="/usr/local/bin/emacs &"
+    alias emacs="/usr/local/bin/emacs & disown"
     alias ctags="`brew --prefix`/bin/ctags"
     ;;
   Linux)
@@ -109,6 +109,9 @@ case $(uname) in
     export PATH="$HOME/.pyenv/bin:$PATH"
   ;;
 esac
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
